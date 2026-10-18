@@ -105,7 +105,7 @@
 
     // Nhạc nền. Để '' sẽ dùng giai điệu nhẹ tự tạo bằng trình duyệt (không cần file).
     // Muốn dùng nhạc riêng: đặt file vào thư mục rồi ghi đường dẫn, ví dụ 'music/nhac.mp3'.
-    musicUrl: '',
+    musicUrl: 'music/nhacnen.mp3',
 
     // true = nhạc tự bật ngay lần chạm đầu tiên vào màn hình (mặc định là bật).
     // false = chỉ bật khi bấm nút "Bật nhạc".
