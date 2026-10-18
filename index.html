@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffeef2">
+  <meta name="description" content="Một góc nhỏ dành riêng cho mẹ.">
+  <title>Gửi mẹ, người con yêu nhất</title>
+
+  <!-- Font dễ thương, đều có đủ dấu tiếng Việt: Baloo 2 (tiêu đề, nút) và Mali (chữ nội dung) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Mali:wght@400;600&display=swap">
+
+  <!-- Liên kết file giao diện và file xử lý (phải nằm cùng thư mục với index.html) -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <main class="stage" id="stage">
+
+    <!-- ===== NỀN: hồng sữa, đốm sáng lấp lánh ===== -->
+    <div class="sky" id="sky" aria-hidden="true"></div>
+    <div class="orb o1" aria-hidden="true"></div>
+    <div class="orb o2" aria-hidden="true"></div>
+    <div class="orb o3" aria-hidden="true"></div>
+
+    <!-- ===== CÁC LỚP HIỆU ỨNG (JavaScript sẽ thêm phần tử vào đây) ===== -->
+    <div class="layer" id="layerPhotos" aria-hidden="true"></div>
+    <div class="layer" id="layerWords" aria-hidden="true"></div>
+    <div class="layer" id="layerHearts" aria-hidden="true"></div>
+
+    <!-- ===== NỘI DUNG CHÍNH: tiêu đề, lời giới thiệu, nút mở thư ===== -->
+    <!-- Nội dung chữ được điền từ CONFIG trong script.js -->
+    <section class="hero">
+      <div class="hero-inner" id="heroInner">
+        <h1 id="title"></h1>
+        <p class="intro" id="intro"></p>
+        <button type="button" class="btn" id="openLetter"></button>
+      </div>
+    </section>
+
+    <!-- ===== NÚT BẬT / TẮT NHẠC (nhạc chỉ phát sau khi người dùng bấm) ===== -->
+    <button type="button" class="music-btn" id="musicBtn" aria-pressed="false"></button>
+  </main>
+
+  <!-- ===== BỨC THƯ DÀNH CHO MẸ ===== -->
+  <div class="letter-overlay" id="letterOverlay" aria-hidden="true">
+    <div class="letter-backdrop" id="letterBackdrop"></div>
+    <article class="letter" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+      <button type="button" class="letter-x" id="closeLetterX" aria-label="Đóng thư">&#10005;</button>
+      <div class="letter-scroll" id="letterScroll">
+        <!-- Nút chuyển giữa các thư (JavaScript tạo từ CONFIG.letters) -->
+        <div class="letter-tabs" id="letterTabs" role="tablist" aria-label="Chọn thư"></div>
+        <h2 id="letterTitle"></h2>
+        <div class="letter-body" id="letterBody"></div>
+        <p class="letter-sign" id="letterSign"></p>
+        <button type="button" class="btn btn-close" id="closeLetter">Đóng thư</button>
+      </div>
+    </article>
+  </div>
+
+  <noscript>
+    <p class="noscript">Trang này cần bật JavaScript để hiển thị lời nhắn dành cho mẹ.</p>
+  </noscript>
+
+</body>
+</html>
